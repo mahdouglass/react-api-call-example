@@ -25,7 +25,8 @@ class NewPost extends Component {
         axios.post('https://jsonplaceholder.typicode.com/posts', newPostData)
         .then(res => {
             console.log(res);
-            this.setState({submit: true});
+            this.props.history.push('/posts');
+            // this.setState({submit: true});
         });
     }
 
